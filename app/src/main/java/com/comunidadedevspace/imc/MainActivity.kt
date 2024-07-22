@@ -1,8 +1,10 @@
 package com.comunidadedevspace.imc
 
+import android.app.ProgressDialog.show
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 
 class MainActivity : AppCompatActivity() {
@@ -19,12 +21,31 @@ class MainActivity : AppCompatActivity() {
         val calcular = findViewById<Button>(R.id.cal_button)
 
         calcular.setOnClickListener {
-            val peso = peso.text
-            val altura = altura.text
-            println("meu primeiro aplicativo teste" + peso)
-        }
+            val pesoString: String = peso.text.toString()
+            val alturaString: String = altura.text.toString()
 
+            if (pesoString == "" || alturaString == "") {
+                //da pra colocar assim ou também colocar if (pesoString.isEmpty()
+                // mostrar mensagem para o usuário
+                Snackbar
+                    .make(
+                        findViewById(android.R.id.content),
+                        "Preencha todos os campos",
+                        Snackbar.LENGTH_LONG
+                    )
+                    .show()
 
+            } else {
+                try {
+                    val pesoFloat = pesoString.toFloat()
+                    val alturaFloat = alturaString.toFloat()
 
+                    val alturaQ2 = alturaFloat * alturaFloat
+                    val resultado = pesoFloat / alturaQ2
+                    println("Resultados IMC" + resultado)
+                } finally{
+                }
+            }
+            }
     }
 }
