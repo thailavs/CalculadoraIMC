@@ -31,7 +31,6 @@ class ResultActivity : AppCompatActivity() {
             result > 30f && result <= 39.9f -> "OBESIDADE GRAVE"
             else -> "IMC INDEFINIDO"
         }
-
         tvClassificacao.text = classificacao
     }
 }
