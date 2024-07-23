@@ -6,13 +6,93 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- Cabeçalho com fundo gradiente -->
+    <LinearLayout
+        android:id="@+id/vg_cabecario"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/gradiente_bg"
+        android:padding="24dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Imagem no cabeçalho -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/im_weight"
+            app:tint="@color/white" />
+
+        <!-- Título "Calculadora IMC" -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Calculadora IMC"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="left" />
+
+        <!-- Mensagem "Preencha todos os campos para calcular seu IMC" -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Preencha todos os campos para calcular seu IMC"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:gravity="left" />
+    </LinearLayout>
+
+    <!-- Campo de entrada para o peso -->
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/pesoEditText"
+        android:layout_width="380dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_bg"
+        android:drawableRight="@drawable/im_weight"
+        android:hint="   Insira aqui o seu peso (ex: 75,5kg)"
+        android:inputType="numberDecimal"
+        android:maxLength="5"
+        app:layout_constraintTop_toBottomOf="@id/vg_cabecario"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <!-- Campo de entrada para a altura -->
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/alturaEditText"
+        android:layout_width="380dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_bg"
+        android:drawableRight="@drawable/height_24dp_5f6368_fill0_wght400_grad0_opsz24"
+        android:hint="   Insira aqui a sua altura (ex: 1,70)"
+        android:inputType="numberDecimal"
+        android:maxLength="4"
+        app:layout_constraintTop_toBottomOf="@id/pesoEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <!-- Botão "Calcular" -->
+    <Button
+        android:id="@+id/cal_button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Calcular"
+        app:layout_constraintTop_toBottomOf="@id/alturaEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
