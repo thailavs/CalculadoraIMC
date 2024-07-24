@@ -8,6 +8,7 @@
     android:orientation="vertical"
     tools:context=".ResultActivity">
 
+
     <!-- Cabeçalho com fundo gradiente -->
     <LinearLayout
         android:id="@+id/vg_cabecario"
@@ -50,6 +51,7 @@
             android:textSize="14sp"
             android:gravity="left" />
 
+
         <TextView
             android:id="@+id/tv_result"
             android:layout_width="wrap_content"
@@ -82,9 +84,27 @@
         android:textStyle="bold"
         android:textSize="20sp"
         android:layout_gravity="center"
-        android:textColor="@color/primary_400"
         tools:text="NORMAL"/>
 
+    <TextView
+        android:id="@+id/tv_subtitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:textSize="15sp"
+        android:text="Parâmetros:"
+        android:textStyle="bold"
+        android:layout_marginTop="250dp"
+        android:layout_gravity="center"/>
 
+    <TextView
+        android:id="@+id/tv_informacoes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:layout_marginStart="85dp"
+        android:textSize="13sp"
+        android:layout_marginTop="26dp"
+        android:layout_gravity="center"/>
 
 </LinearLayout>
