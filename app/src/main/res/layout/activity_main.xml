@@ -8,7 +8,7 @@
 
     <!-- Cabeçalho com fundo gradiente -->
     <LinearLayout
-        android:id="@+id/vg_cabecario"
+        android:id="@+id/vg_cabecalho"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/gradiente_bg"
@@ -27,7 +27,7 @@
             android:src="@drawable/im_weight"
             app:tint="@color/white" />
 
-        <!-- Título "Calculadora IMC" -->
+        <!-- Título -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -38,7 +38,7 @@
             android:textStyle="bold"
             android:gravity="left" />
 
-        <!-- Mensagem "Preencha todos os campos para calcular seu IMC" -->
+        <!-- Mensagem -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -61,7 +61,7 @@
         android:inputType="numberDecimal"
         android:maxLength="5"
         android:textSize="17sp"
-        app:layout_constraintTop_toBottomOf="@id/vg_cabecario"
+        app:layout_constraintTop_toBottomOf="@id/vg_cabecalho"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5" />

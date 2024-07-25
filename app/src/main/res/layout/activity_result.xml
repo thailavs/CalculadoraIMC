@@ -11,7 +11,7 @@
 
     <!-- Cabeçalho com fundo gradiente -->
     <LinearLayout
-        android:id="@+id/vg_cabecario"
+        android:id="@+id/vg_cabecalho"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/gradiente_bg"

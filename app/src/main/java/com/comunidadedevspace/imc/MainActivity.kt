@@ -15,10 +15,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Recuperar os componentes EditText
-        //Criar uma variável e associar o componente de UI <EditText>
-        // Colocar ação no botão setOnClickListener
-
         val peso = findViewById<TextInputEditText>(R.id.pesoEditText)
         val altura = findViewById<TextInputEditText>(R.id.alturaEditText)
         val calcular = findViewById<Button>(R.id.cal_button)
@@ -28,8 +24,7 @@ class MainActivity : AppCompatActivity() {
             val alturaString: String = altura.text.toString()
 
             if (pesoString == "" || alturaString == "") {
-                //da pra colocar assim ou também colocar if (pesoString.isEmpty()
-                // mostrar mensagem para o usuário
+
                 Snackbar
                     .make(
                         findViewById(android.R.id.content),
